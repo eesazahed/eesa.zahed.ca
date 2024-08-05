@@ -55,24 +55,27 @@ const Home: NextPage = () => {
 
           <section>
             <h2 className="mt-12 mb-4 font-bold text-3xl">Tech stack</h2>
-            <p className="my-1 mx-4">
-              <b>Back-end:</b> Javascript, Typescript, Python
-            </p>
-            <p className="my-1 mx-4">
-              <b>Front-end:</b> HTML, CSS, Sass, EJS, Jinja
-            </p>
-            <p className="my-1 mx-4">
-              <b>Framworks:</b> Node, Express, React, Next.js, Flask
-            </p>
-            <p className="my-1 mx-4">
-              <b>Databases:</b> SQL, SQLite, MongoDB, Firebase
-            </p>
-            <p className="my-1 mx-4">
-              <b>Libraries:</b> TailwindCSS, PicoCSS, Bootstrap, jQuery
-            </p>
-            <p className="my-1 mx-4">
-              <b>Platforms:</b> Git, GitHub, Visual Studio Code, MacOS Terminal
-            </p>
+            <div className="mx-4 text-lg">
+              <p className="my-2">
+                <b>Back-end:</b> Javascript, Typescript, Python
+              </p>
+              <p className="my-2">
+                <b>Front-end:</b> HTML, CSS, Sass, EJS, Jinja
+              </p>
+              <p className="my-2">
+                <b>Framworks:</b> Node, Express, React, Next.js, Flask
+              </p>
+              <p className="my-2">
+                <b>Databases:</b> SQL, SQLite, MongoDB, Firebase
+              </p>
+              <p className="my-2">
+                <b>Libraries:</b> TailwindCSS, PicoCSS, Bootstrap, jQuery
+              </p>
+              <p className="my-2">
+                <b>Platforms:</b> Git, GitHub, Visual Studio Code, MacOS
+                Terminal
+              </p>
+            </div>
           </section>
 
           <section>
