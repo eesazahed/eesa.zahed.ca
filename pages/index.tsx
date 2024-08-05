@@ -27,8 +27,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="py-16 leading-8 text-xl grid min-h-screen place-items-center">
         <h1 className="my-8 text-6xl md:text-8xl text-center font-bold">
-          {/* <Gradient text="Eesa Zahed" /> */}
-          Eesa Zahed
+          <Gradient text="Eesa Zahed" />
         </h1>
         <a
           className={styles["image-link"]}
@@ -42,8 +41,10 @@ const Home: NextPage = () => {
             width={250}
           />
         </a>
-        <p className="my-8 text-2xl text-center italic ">
-          High school student &mdash; Full-stack developer
+        <p className="my-8 text-2xl text-center italic flex justify-between h-full items-center">
+          High school student <span className="mx-3">&mdash;</span>
+          <span className="not-italic	text-4xl">🇨🇦</span>
+          <span className="mx-3">&mdash;</span> Full-stack developer
         </p>
         <div className="md:w-1/2 w-5/6">
           <p className="my-4">
@@ -80,12 +81,12 @@ const Home: NextPage = () => {
               <ListItem
                 text="LaserSocial"
                 href="https://laser.vercel.app/feed"
-                description="a fully-functioning social media site I built"
+                description="functioning social media platform"
               />
               <ListItem
                 text="Explore Ontario"
                 href="https://github.com/eesazahed/isu"
-                description="a project for Grade 9 Canadian Geography"
+                description="tourism website"
               />
               <ListItem
                 text="Quadratic Helper"
@@ -100,7 +101,7 @@ const Home: NextPage = () => {
               <ListItem
                 text="Bitcoin Calc"
                 href="https://github.com/eesazahed/bitcoin-calc-chrome-extension"
-                description="a Bitcoin-to-USD converter Chrome extension"
+                description="chrome extension for a bitcoin price converter"
               />
             </ul>
             <p className="mt-4">
@@ -115,22 +116,22 @@ const Home: NextPage = () => {
               <ListItem
                 text="Github"
                 href="https://github.com/eesazahed/"
-                description="to view my repos"
+                description="view my repos"
               />
               <ListItem
                 text="Replit"
                 href="https://replit.com/@eesazahed/"
-                description="to view my python programs"
+                description="view my python programs"
               />
               <ListItem
                 text="LinkedIn"
                 href="https://www.linkedin.com/in/eszhd/"
-                description="to connect"
+                description="view my profile"
               />
               <ListItem
                 text="FreeCodeCamp"
                 href="https://www.freecodecamp.org/news/author/ez/"
-                description="to read my articles"
+                description="read my articles"
               />
             </ul>
           </section>

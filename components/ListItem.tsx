@@ -9,9 +9,9 @@ interface Props {
 
 const ListItem: NextPage<Props> = ({ text, href, description }) => {
   return (
-    <li className="mx-10 py-1 list-[square]">
+    <li className="mx-10 py-1 list-[square] text-lg">
       <Link text={text} href={href} />
-      {description && <i> {description}</i>}
+      {description && <i className="text-[#9CA3AF]"> - {description}</i>}
     </li>
   );
 };
