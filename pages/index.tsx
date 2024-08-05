@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   return (
     <div className="mx-8">
       <Head>
-        <title>Eesa Zahed - Full-stack Web Developer</title>
+        <title>Eesa Zahed - Full-stack Developer</title>
         <meta name="description" content="Made by Eesa Zahed" />
         <link
           rel="icon"
