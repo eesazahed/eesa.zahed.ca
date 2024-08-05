@@ -7,16 +7,12 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background-color: #f0f0f0;
+  background-color: white;
 }
 
 a {
-  color: #0070f3;
+  color: #23bb6a;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,9 +21,9 @@ a {
   }
   body {
     color: white;
-    background: #222222;
+    background: #1e1e1e;
   }
   a {
-    color: #0092f3;
+    color: #00f371;
   }
 }

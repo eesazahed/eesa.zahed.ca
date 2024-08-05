@@ -1,6 +1,6 @@
 .image-link {
   width: 33.3%;
-  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+  filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.8));
 }
 
 .image-link img {
@@ -8,19 +8,19 @@
   transition: 0.5s;
   object-fit: cover;
   border-radius: 33.3%;
-  margin: 2rem auto;
+  margin: 3rem auto;
+  animation: glowing 1.3s infinite alternate;
 }
 
 .image-link img:hover {
   transform: scale(1.1);
-  animation: glowing 1s infinite alternate;
 }
 
 @keyframes glowing {
   from {
-    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+    filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.8));
   }
   to {
-    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 1));
+    filter: drop-shadow(0 0 20px rgba(0, 255, 136, 1));
   }
 }

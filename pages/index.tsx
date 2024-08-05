@@ -1,8 +1,20 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Gradient from "../components/Gradient";
+import ListItem from "../components/ListItem";
+import Link from "../components/Link";
+import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
+  const [reposCount, setReposCount] = useState<number>(0);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/eesazahed")
+      .then((response) => response.json())
+      .then((data) => setReposCount(data.public_repos));
+  }, []);
+
   return (
     <div className="mx-8">
       <Head>
@@ -14,7 +26,10 @@ const Home: NextPage = () => {
         />
       </Head>
       <main className="py-16 leading-8 text-xl grid min-h-screen place-items-center">
-        <h1 className="my-8 text-7xl text-center font-bold">Eesa Zahed</h1>
+        <h1 className="my-8 text-6xl md:text-8xl text-center font-bold">
+          {/* <Gradient text="Eesa Zahed" /> */}
+          Eesa Zahed
+        </h1>
         <a
           className={styles["image-link"]}
           href="https://github.com/eesazahed"
@@ -22,109 +37,136 @@ const Home: NextPage = () => {
           target="_blank"
         >
           <img
-            className="rounded-3xl"
             src="https://avatars.githubusercontent.com/u/97064249"
             alt="My profile picture"
             width={250}
           />
         </a>
-        <p className="my-8 text-2xl text-center">Full-stack Developer</p>
+        <p className="my-8 text-2xl text-center italic ">
+          High school student &mdash; Full-stack developer
+        </p>
         <div className="md:w-1/2 w-5/6">
           <p className="my-4">
-            Hello, my name is Eesa Zahed, and I do full-stack web development as
-            a hobby. I started coding in 2015, using Scratch to learn basic
-            concepts. I started to learn web development in 2018.
+            I&apos;m a high school student who does full-stack web development
+            as a hobby. I started learning coding with Scratch in 2015 before
+            moving on to web development in 2018.
           </p>
 
-          <p className="my-4">Tech stack:</p>
-          <p className="my-1 mx-4">
-            <b>Back-end:</b> Javascript, Typescript, Python
-          </p>
-          <p className="my-1 mx-4">
-            <b>Front-end:</b> HTML, CSS, Sass, EJS, Jinja
-          </p>
-          <p className="my-1 mx-4">
-            <b>Framworks:</b> Node, Express, React, Next.js, Flask
-          </p>
-          <p className="my-1 mx-4">
-            <b>Databases:</b> SQL, SQLite, MongoDB, Firebase
-          </p>
-          <p className="my-1 mx-4">
-            <b>Libraries:</b> TailwindCSS, PicoCSS, Bootstrap, jQuery
-          </p>
-          <p className="my-1 mx-4">
-            <b>Platforms:</b> Git, GitHub, Visual Studio Code, MacOS Terminal
-          </p>
+          <section>
+            <h2 className="mt-12 mb-4 font-bold text-3xl">Tech stack</h2>
+            <p className="my-1 mx-4">
+              <b>Back-end:</b> Javascript, Typescript, Python
+            </p>
+            <p className="my-1 mx-4">
+              <b>Front-end:</b> HTML, CSS, Sass, EJS, Jinja
+            </p>
+            <p className="my-1 mx-4">
+              <b>Framworks:</b> Node, Express, React, Next.js, Flask
+            </p>
+            <p className="my-1 mx-4">
+              <b>Databases:</b> SQL, SQLite, MongoDB, Firebase
+            </p>
+            <p className="my-1 mx-4">
+              <b>Libraries:</b> TailwindCSS, PicoCSS, Bootstrap, jQuery
+            </p>
+            <p className="my-1 mx-4">
+              <b>Platforms:</b> Git, GitHub, Visual Studio Code, MacOS Terminal
+            </p>
+          </section>
 
-          <p className="my-4">Links</p>
-          <ul>
-            <li className="mx-10 py-1 list-disc">
-              <a
-                rel="noreferrer"
-                target="_blank"
+          <section>
+            <h2 className="mt-12 mb-4 font-bold text-3xl">Projects</h2>
+            <ul>
+              <ListItem
+                text="LaserSocial"
+                href="https://laser.vercel.app/feed"
+                description="a fully-functioning social media site I built"
+              />
+              <ListItem
+                text="Explore Ontario"
+                href="https://github.com/eesazahed/isu"
+                description="a project for Grade 9 Canadian Geography"
+              />
+              <ListItem
+                text="Quadratic Helper"
+                href="https://github.com/eesazahed/quadratic-helper"
+                description="explains & solves quadratic equations"
+              />
+              <ListItem
+                text="Create Banner"
+                href="https://github.com/eesazahed/create-banner"
+                description="generates a customizable banner"
+              />
+              <ListItem
+                text="Bitcoin Calc"
+                href="https://github.com/eesazahed/bitcoin-calc-chrome-extension"
+                description="a Bitcoin-to-USD converter Chrome extension"
+              />
+            </ul>
+            <p className="mt-4">
+              View all <b>{reposCount}</b> of my public repositories on{" "}
+              <Link text="GitHub" href="https://github.com/eesazahed/" />
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mt-12 mb-4 font-bold text-3xl">Links</h2>
+            <ul>
+              <ListItem
+                text="Github"
                 href="https://github.com/eesazahed/"
-              >
-                Github
-              </a>{" "}
-              (for most of my projects)
-            </li>
-            <li className="mx-10 py-1 list-disc">
-              <a
-                rel="noreferrer"
-                target="_blank"
+                description="to view my repos"
+              />
+              <ListItem
+                text="Replit"
                 href="https://replit.com/@eesazahed/"
-              >
-                Replit
-              </a>{" "}
-              (for most of my python programs)
-            </li>
-          </ul>
+                description="to view my python programs"
+              />
+              <ListItem
+                text="LinkedIn"
+                href="https://www.linkedin.com/in/eszhd/"
+                description="to connect"
+              />
+              <ListItem
+                text="FreeCodeCamp"
+                href="https://www.freecodecamp.org/news/author/ez/"
+                description="to read my articles"
+              />
+            </ul>
+          </section>
 
-          <p className="my-4">
-            Here are the certifications I&apos;ve accoladed in the past:
-          </p>
-          <ul>
-            <li className="mx-10 py-1 list-disc">
-              <a
-                rel="noreferrer"
-                target="_blank"
+          <section>
+            <h2 className="mt-12 mb-4 font-bold text-3xl">Certifications</h2>
+            <ul>
+              <ListItem
+                text="CS50x: Introduction to Computer Science"
                 href="https://certificates.cs50.io/2020086e-51d6-4098-9026-29048e0651c5.png"
-              >
-                CS50x: Introduction to Computer Science
-              </a>
-            </li>
-            <li className="mx-10 py-1 list-disc">
-              <a
-                rel="noreferrer"
-                target="_blank"
+              />
+
+              <ListItem
+                text="FreeCodeCamp | Responsive Web Design"
                 href="https://www.freecodecamp.org/certification/eesazahed/responsive-web-design"
-              >
-                FreeCodeCamp | Responsive Web Design
-              </a>
-            </li>
-            <li className="mx-10 py-1 list-disc">
-              <a
-                rel="noreferrer"
-                target="_blank"
+              />
+
+              <ListItem
+                text="FreeCodeCamp | JavaScript Algorithms and Data Structures"
                 href="https://www.freecodecamp.org/certification/eesazahed/javascript-algorithms-and-data-structures"
-              >
-                FreeCodeCamp | JavaScript Algorithms and Data Structures
-              </a>
-            </li>
-          </ul>
-          <br />
-          <p className="my-4">
-            Contact me at{" "}
-            <a rel="noreferrer" href="mailto:eszhd1@gmail.com">
-              eszhd1@gmail.com
-            </a>
-            .
-          </p>
+              />
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="mt-12 mb-4 font-bold text-3xl">Send me an email</h2>
+            <p>eszhd1 (at) gmail.com</p>
+          </section>
         </div>
       </main>
 
       <footer className="py-16 text-center">
-        <p>Designed and developed by Eesa Zahed</p>
+        <p>
+          Designed and developed by{" "}
+          <Link text="Eesa Zahed" href="https://github.com/eesazahed/" />
+        </p>
       </footer>
     </div>
   );
