@@ -24,7 +24,7 @@ const Custom404: NextPage = () => {
       <footer className="py-16 text-center">
         <p>
           Designed and developed by{" "}
-          <Link text="Eesa Zahed" href="https://eesa.zahed.ca" />
+          <Link text="Eesa Zahed" href="https://github.com/eesazahed" />
         </p>
       </footer>
     </div>
