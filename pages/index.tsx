@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Gradient from "../components/Gradient";
 import ListItem from "../components/ListItem";
 import Link from "../components/Link";
@@ -26,31 +25,13 @@ const Home: NextPage = () => {
         />
       </Head>
       <main className="py-16 leading-8 text-xl grid min-h-screen place-items-center">
-        <h1 className="my-8 text-6xl md:text-8xl text-center font-bold">
+        <h1 className="my-12 text-6xl md:text-8xl font-bold">
           <Gradient text="Eesa Zahed" />
         </h1>
-        <a
-          className={styles["image-link"]}
-          href="https://github.com/eesazahed"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img
-            src="https://avatars.githubusercontent.com/u/97064249"
-            alt="My profile picture"
-            width={250}
-          />
-        </a>
-        <p className="my-8 text-2xl text-center italic flex justify-between h-full items-center">
-          High school student <span className="mx-3">&mdash;</span>
-          <span className="not-italic	text-4xl">🇨🇦</span>
-          <span className="mx-3">&mdash;</span> Full-stack developer
-        </p>
+
         <div className="md:w-1/2 w-5/6">
-          <p className="my-4">
-            I&apos;m a high school student who does full-stack web development
-            as a hobby. I started learning coding with Scratch in 2015 before
-            moving on to web development in 2018.
+          <p className="my-4 text-center md:text-left">
+            I'm a high school student with a passion for learning and building.
           </p>
 
           <section>
