@@ -25,15 +25,13 @@ const Home: NextPage = () => {
         />
       </Head>
       <main className="py-16 leading-8 text-xl grid min-h-screen place-items-center">
-        <h1 className="my-12 text-6xl md:text-8xl font-bold">
-          <Gradient text="Eesa Zahed" />
-        </h1>
-
         <div className="md:w-1/2 w-5/6">
+          <h1 className="my-16 text-6xl md:text-8xl font-bold text-center md:text-left">
+            <Gradient text="Eesa Zahed" />
+          </h1>
           <p className="my-4 text-center md:text-left">
             I'm a high school student with a passion for learning and building.
           </p>
-
           <section>
             <h2 className="mt-12 mb-4 font-bold text-3xl">Tech stack</h2>
             <div className="mx-4 text-lg">
@@ -58,7 +56,6 @@ const Home: NextPage = () => {
               </p>
             </div>
           </section>
-
           <section>
             <h2 className="mt-12 mb-4 font-bold text-3xl">Projects</h2>
             <ul>
@@ -93,7 +90,6 @@ const Home: NextPage = () => {
               <Link text="GitHub" href="https://github.com/eesazahed/" />
             </p>
           </section>
-
           <section>
             <h2 className="mt-12 mb-4 font-bold text-3xl">Links</h2>
             <ul>
@@ -119,7 +115,6 @@ const Home: NextPage = () => {
               />
             </ul>
           </section>
-
           <section>
             <h2 className="mt-12 mb-4 font-bold text-3xl">Certifications</h2>
             <ul>
@@ -139,7 +134,6 @@ const Home: NextPage = () => {
               />
             </ul>
           </section>
-
           <section>
             <h2 className="mt-12 mb-4 font-bold text-3xl">Send me an email</h2>
             <p>eszhd1 (at) gmail.com</p>
