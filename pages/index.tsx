@@ -94,7 +94,7 @@ const Home: NextPage = () => {
             <h2 className="mt-12 mb-4 font-bold text-3xl">Links</h2>
             <ul>
               <ListItem
-                text="Github"
+                text="GitHub"
                 href="https://github.com/eesazahed/"
                 description="view my repos"
               />
