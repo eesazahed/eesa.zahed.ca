@@ -26,13 +26,13 @@ const Home: NextPage = () => {
       </Head>
       <main className="py-16 leading-8 text-xl grid min-h-screen place-items-center">
         <div className="md:w-1/2 w-5/6">
-          <h1 className="my-16 text-6xl md:text-8xl font-bold text-center md:text-left">
+          <h1 className="my-16 text-6xl md:text-8xl font-bold text-center md:text-left md:pl-0[-2rem]">
             <Gradient text="Eesa Zahed" />
           </h1>
-          <p className="my-4 text-center md:text-left">
+          {/* <p className="my-4 text-center md:text-left">
             I'm a high school student with a passion for learning and building.
-          </p>
-          <section>
+          </p> */}
+          {/* <section>
             <h2 className="mt-12 mb-4 font-bold text-3xl">Tech stack</h2>
             <div className="mx-4 text-lg">
               <p className="my-2">
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
                 Terminal
               </p>
             </div>
-          </section>
+          </section> */}
           <section>
             <h2 className="mt-12 mb-4 font-bold text-3xl">Projects</h2>
             <ul>
@@ -66,22 +66,22 @@ const Home: NextPage = () => {
               />
               <ListItem
                 text="Explore Ontario"
-                href="https://github.com/eesazahed/isu"
+                href="https://isu.vercel.app"
                 description="tourism website"
               />
               <ListItem
                 text="Quadratic Helper"
-                href="https://github.com/eesazahed/quadratic-helper"
+                href="https://eesazahed.github.io/quadratic-helper"
                 description="explains & solves quadratic equations"
               />
               <ListItem
-                text="Create Banner"
-                href="https://github.com/eesazahed/create-banner"
+                text="Create A Banner"
+                href="https://eesazahed.github.io/create-banner"
                 description="generates a customizable banner"
               />
               <ListItem
                 text="Bitcoin Calc"
-                href="https://github.com/eesazahed/bitcoin-calc-chrome-extension"
+                href="https://github.com/eesazahed/btc-calc-extension"
                 description="chrome extension for a bitcoin price converter"
               />
             </ul>
