@@ -87,7 +87,7 @@ const Home: NextPage = () => {
             </ul>
             <p className="mt-4">
               View all <b>{reposCount}</b> of my public repositories on{" "}
-              <Link text="GitHub" href="https://github.com/eesazahed/" />
+              <Link text="GitHub" href="https://github.com/eesazahed?tab=repositories" />
             </p>
           </section>
           <section>
