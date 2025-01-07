@@ -110,7 +110,7 @@ const Home: NextPage = () => {
               />
               <ListItem
                 text="FreeCodeCamp"
-                href="https://www.freecodecamp.org/news/author/ez/"
+                href="https://www.freecodecamp.org/news/author/eesazahed/"
                 description="read my articles"
               />
             </ul>
