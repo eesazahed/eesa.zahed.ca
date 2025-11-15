@@ -22,7 +22,7 @@ const myLinks = [
   {
     name: "album",
     url: "https://eesazahed.github.io/album/",
-    description: "all photographs are my original works",
+    description: "all original works",
   },
   {
     name: "twitter",

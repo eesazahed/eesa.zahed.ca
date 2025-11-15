@@ -50,7 +50,6 @@ a:hover:not(.gallery-image-link) {
 }
 
 .nav-link {
-  font-size: 1.1rem;
   color: var(--link-color);
 }
 
@@ -74,11 +73,8 @@ a:hover:not(.gallery-image-link) {
   text-align: right;
 }
 
-.footer p,
-.footer span,
-.footer a {
-  font-size: 1rem;
-  line-height: 1.75rem;
+.footer p {
+  line-height: 2rem;
 }
 
 #email {
@@ -124,6 +120,10 @@ a:hover:not(.gallery-image-link) {
   .gallery-image-link {
     flex: 1 1 90%;
     max-width: 100%;
+  }
+
+  * {
+    font-size: 1rem;
   }
 }
 
