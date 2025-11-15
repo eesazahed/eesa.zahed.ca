@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --description-color: #90a1b9;
+  --link-color: #36ac7f;
+}
+
+* {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.1rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover:not(.gallery-image-link) {
+  background-color: var(--link-color);
+  color: white;
+}
+
+.body {
+  background-color: white;
+  color: black;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 40rem;
+  margin: 4rem auto;
+}
+
+.container p {
+  line-height: 1.5rem;
+}
+
+.navbar {
+  margin-bottom: 6rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: var(--link-color);
+}
+
+.description {
+  font-style: italic;
+  color: var(--description-color);
+}
+
+.list {
+  margin: 1rem 0rem 2rem 0rem;
+}
+
+.list-item {
+  margin-left: -1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  text-align: right;
+}
+
+.footer p,
+.footer span,
+.footer a {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+#email {
+  cursor: pointer;
+}
+
+.gallery-images {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gallery-image-link {
+  flex: 1 1 45%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.gallery-image {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 0rem 0rem 0rem #0000;
+  transition: 0.25s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 1rem #3af07c;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0rem auto;
+  }
+
+  .gallery-image-link {
+    flex: 1 1 90%;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  .body {
+    color: white;
+    background: #2d2d31;
+  }
+}
