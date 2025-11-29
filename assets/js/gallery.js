@@ -1,10 +1,12 @@
 const baseURL = "https://raw.githubusercontent.com/eesazahed/photography/main/";
 
 const images = [
-  { file: "ds.jpg", alt: "my nintendo dsi" },
+  { file: "ds1.jpg", alt: "my nintendo dsi" },
   { file: "turkiye11.JPG", alt: "hotel hallway" },
   { file: "turkiye5.JPG", alt: "cat in turkiye" },
   { file: "turkiye4.jpg", alt: "masjid in turkiye" },
+  { file: "toronto1.jpg", alt: "toronto street" },
+  { file: "canada1.jpg", alt: "canada gas station" },
   { file: "lego5.jpg", alt: "lego star wars" },
   { file: "turkiye6.jpg", alt: "view in turkiye" },
 ];
